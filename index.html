@@ -3,79 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple vanilla HTML, CSS, and JavaScript photo gallery.">
+    <link rel="icon" href="gallery-art.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
     <title>Photo Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .card .title {
-            padding: 12px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
-    <h1 style="text-align: center; margin-bottom: 30px;">Photo Gallery</h1>
-    <div class="gallery">
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+1" alt="Placeholder Image 1">
-            <div class="title">Image 1</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+2" alt="Placeholder Image 2">
-            <div class="title">Image 2</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+3" alt="Placeholder Image 3">
-            <div class="title">Image 3</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+4" alt="Placeholder Image 4">
-            <div class="title">Image 4</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+5" alt="Placeholder Image 5">
-            <div class="title">Image 5</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+6" alt="Placeholder Image 6">
-            <div class="title">Image 6</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+7" alt="Placeholder Image 7">
-            <div class="title">Image 7</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+8" alt="Placeholder Image 8">
-            <div class="title">Image 8</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Image+9" alt="Placeholder Image 9">
-            <div class="title">Image 9</div>
-        </div>
-    </div>
+    <main class="page-shell">
+        <header class="page-header">
+            <p class="eyebrow">A collection of moments</p>
+            <h1>Photo Gallery</h1>
+            <p class="intro">Browse the collection and select a photo to learn more.</p>
+        </header>
+
+        <section class="gallery" aria-label="Photo gallery">
+            <article class="card" tabindex="0" data-title="Golden Hour">
+                <img src="gallery-art.svg" alt="Abstract golden hour artwork">
+                <div class="card-content">
+                    <h2>Golden Hour</h2>
+                    <p>Warm light, quiet moments</p>
+                </div>
+            </article>
+            <article class="card" tabindex="0" data-title="Ocean Air">
+                <img src="gallery-art.svg" alt="Abstract ocean blue artwork">
+                <div class="card-content">
+                    <h2>Ocean Air</h2>
+                    <p>Blue skies and open water</p>
+                </div>
+            </article>
+            <article class="card" tabindex="0" data-title="Soft Focus">
+                <img src="gallery-art.svg" alt="Abstract soft pink artwork">
+                <div class="card-content">
+                    <h2>Soft Focus</h2>
+                    <p>Color in gentle motion</p>
+                </div>
+            </article>
+            <article class="card" tabindex="0" data-title="New Paths">
+                <img src="gallery-art.svg" alt="Abstract green landscape artwork">
+                <div class="card-content">
+                    <h2>New Paths</h2>
+                    <p>Every road leads somewhere</p>
+                </div>
+            </article>
+            <article class="card" tabindex="0" data-title="Still Life">
+                <img src="gallery-art.svg" alt="Abstract still life artwork">
+                <div class="card-content">
+                    <h2>Still Life</h2>
+                    <p>Details worth slowing down for</p>
+                </div>
+            </article>
+            <article class="card" tabindex="0" data-title="Daydream">
+                <img src="gallery-art.svg" alt="Abstract violet daydream artwork">
+                <div class="card-content">
+                    <h2>Daydream</h2>
+                    <p>A little space to wander</p>
+                </div>
+            </article>
+            <article class="card" tabindex="0" data-title="First Light">
+                <img src="gallery-art.svg" alt="Abstract sunrise artwork">
+                <div class="card-content">
+                    <h2>First Light</h2>
+                    <p>A fresh start every morning</p>
+                </div>
+            </article>
+            <article class="card" tabindex="0" data-title="Wild Bloom">
+                <img src="gallery-art.svg" alt="Abstract floral artwork">
+                <div class="card-content">
+                    <h2>Wild Bloom</h2>
+                    <p>Beauty in unexpected places</p>
+                </div>
+            </article>
+            <article class="card" tabindex="0" data-title="After Rain">
+                <img src="gallery-art.svg" alt="Abstract after-rain artwork">
+                <div class="card-content">
+                    <h2>After Rain</h2>
+                    <p>Everything feels new again</p>
+                </div>
+            </article>
+        </section>
+
+        <p class="selection-status" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
