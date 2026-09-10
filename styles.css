@@ -102,6 +102,38 @@ h1 {
     font-size: 0.9rem;
 }
 
+.card-description {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(29, 36, 51, 0.1);
+}
+
+.card-description summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    outline: none;
+}
+
+.card-description summary::marker {
+    content: "▼ ";
+    color: var(--accent);
+}
+
+.card-description[open] summary::marker {
+    content: "▲ ";
+}
+
+.card-description p {
+    margin: 10px 0 0;
+    color: var(--ink);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
 .selection-status {
     min-height: 1.5em;
     margin: 28px 0 0;
