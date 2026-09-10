@@ -134,6 +134,29 @@ h1 {
     line-height: 1.5;
 }
 
+.generate-description {
+    margin-top: 12px;
+    padding: 7px 10px;
+    border: 1px solid rgba(66, 99, 235, 0.35);
+    border-radius: 7px;
+    color: var(--accent);
+    background: rgba(66, 99, 235, 0.06);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.generate-description:hover:not(:disabled),
+.generate-description:focus-visible {
+    background: rgba(66, 99, 235, 0.13);
+}
+
+.generate-description:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
 .selection-status {
     min-height: 1.5em;
     margin: 28px 0 0;
