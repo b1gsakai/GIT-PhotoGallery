@@ -10,11 +10,10 @@ function selectCard(card) {
 async function generateDescription(card, button, output) {
     const image = card.querySelector("img");
     const title = card.dataset.title || card.querySelector("h2")?.textContent || "";
-    const originalText = output.dataset.original || output.textContent;
 
     button.disabled = true;
     button.textContent = "Generating…";
-    output.dataset.original = originalText;
+    const currentText = output.textContent;
     output.textContent = "Generating an AI description…";
 
     try {
@@ -30,7 +29,7 @@ async function generateDescription(card, button, output) {
         output.textContent = result.description;
         status.textContent = `AI description ready for ${title}`;
     } catch (error) {
-        output.textContent = originalText;
+        output.textContent = currentText;
         status.textContent = error.message;
     } finally {
         button.disabled = false;
